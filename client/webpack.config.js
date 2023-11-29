@@ -10,6 +10,7 @@ module.exports = () => {
   return {
     mode: 'development',
     entry: {
+      // header: './src/js/header.js',
       main: './src/js/index.js',
       install: './src/js/install.js'
     },
@@ -25,7 +26,7 @@ module.exports = () => {
 
       new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: 'service-worker.js',
+        swDest: 'src-sw.js',
       }),
       new WebpackPwaManifest({
         name: 'JATE',
